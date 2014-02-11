@@ -29,8 +29,91 @@ Las respuestas propuestas en este repositorio son correspondientes a las pregunt
 \section{Preguntas y Respuestas}
 
 \subsection{Capítulo 5: Nombres, Enlaces y Alcances.}
+\begin{itemize}
+\item {\bf Pregunta 5} \\\\
+Escriba una función en C que incluya las siguienetes secuencia de sentencias:
+x=21;
+int x;
+x=42;
+Ejecute el programa ye explique los resultados. Reescriba el código en C++ y Java, compare los resultados.
+Lenguaje C
+\begin{lstlisting}[frame=single]
+void main()
+ {
+ 	x=21;
+	int x;
+	x=42;
+}
+\end{lstlisting}
+Error:  error C2065: 'x' : identificador no declarado\\\\
+Lenguaje C++
+\begin{lstlisting}[frame=single]
+void main(void)
+ {
+ 	cout << "Ingresa 21:";
+ 	cin >> x;
+ 	 int x;
+ 	x=42;
+ 	cout << "X vale:" << x;
+ 	cin.get();
+}
+\end{lstlisting}
+Error: error C2065: 'x' : identificador no declarado \\\\
+Lenguaje Java
+\begin{lstlisting}[frame=single]
+ public static void main(String[] args) {         
+    x = 21;
+    int x;
+    x = 42;        
+ }
+\end{lstlisting}
+Error: Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - cannot find symbol-symbol: variable x\\\\ 
+\item {\bf Pregunta 7} \\\\
+Escriba funciones en C o C++, una que declare un largo arreglo de forma estática, otra que declare el mismo arreglo largo en un stack y otra que declare el mismo arreglo desde el heap. Llame a cada subprograma un gran numero de veces(al menos 100000) e imprime el tiempo de ejecución requerido para cada uno.
+Lenguaje C
+\begin{lstlisting}[frame=single]
 
-\subsection{Capítulo 7: Expressions and Assignment Statements}
+void main()
+{
+	clock_t t1,t2,t3,t4;
+	int i;
+
+	t1=clock(); 
+	for(i=0;i<100000;i++)
+	{
+		funcion1();
+		//funcion2();
+		//funcion3();
+	}
+	t2=clock(); 
+	printf("El Tiempo es: %f\n",
+	(t2-t1)/(double) CLOCKS_PER_SEC);
+}
+int funcion1()
+{
+	int i;
+	int A[256];
+	for(i=0;i<256;i++)
+	   	 A[i] = i;
+	return 0;
+}
+int funcion2()
+{
+	int *a;
+	int i;
+	a = new int[256];
+	for(i=0;i<256;i++)
+		a[i] = i;  
+	return 0;
+}
+\end{lstlisting}
+Output\\
+-El tiempo es:0.156000\\
+-El tiempo es:0.807000\\
+Al observar los tiempos de ejecución, vemos que el primero es menor que el segundo, correspondiente a la función del arreglo estático que nos indica que el tiempo en llevar ese arreglo a la memoria prima es muy corto a diferencia del segundo que se lo realizo en el heap.
+
+\end{itemize}
+\subsection{Capítulo 6: Expressions and Assignment Statements}
 \begin{itemize}
 \item {\bf Pregunta 3} \\\\
 Escribe un programa en tu lenguaje favorito que determine y muestre la precedencia y asociatividad de sus operadores aritmeticos y booleanos.\\
