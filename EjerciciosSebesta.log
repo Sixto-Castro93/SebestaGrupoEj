@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.16)  10 FEB 2014 19:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.10.16)  10 FEB 2014 19:48
 entering extended mode
 **C:/Users/Owner/Documents/GitHub/SebestaGrupoEj/EjerciciosSebesta.tex
 (C:/Users/Owner/Documents/GitHub/SebestaGrupoEj/EjerciciosSebesta.tex
@@ -631,41 +631,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--75
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--81
+Underfull \hbox (badness 10000) in paragraph at lines 77--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--81
+Underfull \hbox (badness 10000) in paragraph at lines 77--86
 
  []
 
 [2]
-
-Package Listings Warning: Text dropped after begin of listing on input line 81.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
+Underfull \hbox (badness 10000) in paragraph at lines 112--115
 
  []
 
 [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
+Underfull \hbox (badness 10000) in paragraph at lines 137--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--140
+
+ []
+
+[4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
  (C:\Users\Owner\Documents\GitHub\SebestaGrupoEj\EjerciciosSebesta.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
 Package rerunfilecheck Info: File `EjerciciosSebesta.out' has not changed.
 (rerunfilecheck)             Checksum: 969FD6FD5D33527E304F5AB67DDC213A;382.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
  ) 
 Here is how much of TeX's memory you used:
- 8350 strings out of 493921
- 116815 string characters out of 3144875
+ 8368 strings out of 493921
+ 117073 string characters out of 3144875
  215575 words of memory out of 3000000
- 11495 multiletter control sequences out of 15000+200000
+ 11494 multiletter control sequences out of 15000+200000
  16284 words of font info for 50 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,6n,32p,516b,1859s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -677,9 +682,9 @@ ec\dpi600\ecbx1440.pk> <C:\Users\Owner\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
 \2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Owner\AppData\Lo
 cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on EjerciciosSebesta.pdf (4 pages, 93469 bytes).
+Output written on EjerciciosSebesta.pdf (5 pages, 98739 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 63 named destinations out of 1000 (max. 500000)
+ 348 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

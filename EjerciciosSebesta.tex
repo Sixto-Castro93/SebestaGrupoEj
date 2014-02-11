@@ -78,6 +78,12 @@ El resultado 3 es: 0.0\\
 Escribir un programa en Java que exponga la regla para el orden de evaluación de operando cuando uno de los operandos es un método call.\\
 Lenguaje Java\\
 \begin{lstlisting}[frame=single]  % Start your code-block
+%#include<stdio.h>
+%#include<conio.h>
+%#include<stdlib.h>
+%#include<windows.h>
+%#include<math.h>
+
 public class JavaApplication2 {
     final static int num=5;
     static int a=5;
@@ -126,6 +132,34 @@ int fun1() {
 OUTPUT\\
 20\\
 Como podemos ver en el main en la 1era linea, comparado con JAVA Y Si Shard en vez de que fun1() retorne 3 y actualize la variable global 'a' a 17,y luego sumarlos y asignarle 20 a 'a'. En C++, sea a = fun1()+a  ó  a = a+fun1(), llamado de función en la izq o derecha del operador en este caso '+'; siempre al llamar fun1(), este va actualizar la variable global a =17 y luego va sumarle 3, asignando un valor de 20 a  la variable 'a'. 
+
+
+\item {\bf Pregunta 6} \\\\
+Lenguaje Si Sharp\\
+\begin{lstlisting}[frame=single]  % Start your code-block
+
+class Program
+    {
+        static int a = 5;
+        static void Main(string[] args)
+        {
+            a = a +fun1();
+            Console.WriteLine(a);
+            Console.ReadLine();
+       }
+
+        static int fun1()
+        {
+            a = 17;
+            return 3;
+        }
+    }
+\end{lstlisting}
+OUTPUT\\
+8\\ 
+Como podemos ver en Si Sharp también se cumple la regla de la asociativad. En este caso el operador '+' asoicativdad desde la izquierda. Primero a=5, luego le suma 3; cuyo resultado que es 8 se le asigna a la variable a.\\
+En cambio si fuese:  a = fun1()+a. En ese caso fun1() retorna 3 y actualiza la variable global 'a'=17 y luego suma 17+3 asignando 20 a la varaible a.
+
 
 
 
