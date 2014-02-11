@@ -68,6 +68,74 @@ Lenguaje Java
  }
 \end{lstlisting}
 Error: Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - cannot find symbol-symbol: variable x\\\\ 
+
+\item {\bf Pregunta 6} \\\\
+Escribir un programa en C++, Java, SI SHARP para determinar el alcance de una variable declarada en un For statement. Especialmente el código debe determinar si una variable es visible después del cuerpo del statement FOR.\\\\
+
+Lenguaje Java\\
+\begin{lstlisting}[frame=single]  % Start your code-block
+using System;
+public class JavaApplication2 {
+	 for(int i = 0; i< 10 ; i++)
+	{
+ 		System.out.println(i);
+	}
+ 	
+ 		System.out.println(i);  
+		//Trata de acceder a la variable i
+	
+}
+\end{lstlisting}
+En este ejemplo podemos darnos cuenta que el println puede imprimir cada iteración de la variable i; pero hacer println de i fuera del for no es posible. Esta función intenta acceder a 'i' pero no puede ya que 'i' es declarada dentro for, no es una varialbe global.\\
+Cannot find symbol\\
+symbol: variable i\\\\
+
+
+Lenguaje C++\\
+\begin{lstlisting}[frame=single]  % Start your code-block
+using System;
+void main(){
+	for (int i = 0; i<10; i++){
+		printf("%d\n", i);
+
+	}
+		
+	printf("%d\n", i); 
+	//Trata de acceder a la variable i
+
+	getch();
+}
+\end{lstlisting}
+Fuera del FOR, printf intenta acceder a 'i' pero no puede ya que 'i' es declarada dentro for, no es una varialbe global.\\\\
+
+
+Lenguaje SI SHARP\\
+\begin{lstlisting}[frame=single]  % Start your code-block
+using System;
+namespace ConsoleApplication2
+{
+    
+    class Program
+    {
+         static void Main(string[] args)
+        {
+            for(int i = 0; i< 10 ; i++){ 
+            	Console.WriteLine(i);
+      	}
+ 	    
+            Console.WriteLine(i);
+	 //Intenta acceder a la variable i
+	Console.ReadLine();
+	}
+        }
+}
+\end{lstlisting}
+OUTPUT\\
+Error\\
+El nombre i  no existe en el actual contexto\\
+Fuera del FOR, Console.WriteLine(i) intenta acceder a 'i' pero no puede ya que 'i' es declarada dentro for, no es una varialbe global.\\\\
+
+
 \item {\bf Pregunta 7} \\\\
 Escriba funciones en C o C++, una que declare un largo arreglo de forma estática, otra que declare el mismo arreglo largo en un stack y otra que declare el mismo arreglo desde el heap. Llame a cada subprograma un gran numero de veces(al menos 100000) e imprime el tiempo de ejecución requerido para cada uno.
 Lenguaje C
