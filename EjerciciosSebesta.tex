@@ -109,7 +109,7 @@ void main(){
 Fuera del FOR, printf intenta acceder a 'i' pero no puede ya que 'i' es declarada dentro for, no es una varialbe global.\\\\
 
 
-Lenguaje SI SHARP\\
+Lenguaje C share\\
 \begin{lstlisting}[frame=single]  % Start your code-block
 using System;
 namespace ConsoleApplication2
@@ -150,8 +150,7 @@ void main()
 	for(i=0;i<100000;i++)
 	{
 		funcion1();
-		//funcion2();
-		//funcion3();
+		//funcion2();		
 	}
 	t2=clock(); 
 	printf("El Tiempo es: %f\n",
@@ -419,7 +418,7 @@ Como podemos ver en el main en la 1era linea, comparado con JAVA Y Si Shard en v
 
 
 \item {\bf Pregunta 6} \\\\
-Lenguaje Si Sharp\\
+Lenguaje C Share\\
 \begin{lstlisting}[frame=single]  % Start your code-block
 
 class Program
@@ -502,6 +501,55 @@ public class Ejercicio9 {
 El tiempo realizando las operaaciones con int fue :6 segundos ,   mientras que con los flotantes fue : 10 segundos.    Se llega a la conclusion que por ser los foltantes de mayor precion que los int a la maquina le toam mayor trabajo realizar esas opraciones , debidoa  eso la diferencia de tiempo. \\
 
 \end{itemize}
+\subsection{Capítulo 8: Statement-Level Control Structures.}
+\begin{itemize}
+\item {\bf Pregunta 4} \\\\
+Considere el sgte segmento de un programa en C. Rescribalo sin usar gotos o breaks\\\\
+Lenguaje C\\
+\end{itemize}
+\begin{lstlisting}[frame=single]  % Start your code-block
+j = -3;
+for (i = 0; i < 3; i++) {
+switch (j + 2) {
+case 3:
+case 2: j--; break;
+case 0: j += 2; break;
+default: j = 0;
+}
+if (j > 0) break;
+j = 3 - i
+}
+\end{lstlisting}
+Resolución:
+\begin{lstlisting}[frame=single] 
+void funcion()
+{
+	int i;
+	int j = -3;
+	for (i = 0; i < 3; i++) 
+	{
+		switch (j + 2) 
+		{
+			case 3:
+				return;
+			case 2: 
+				{j--; 
+				return;}
+			case 0:
+				{j += 2; 
+				return;}
+			default:
+				{j = 0;
+				return;}
+		}
+		if (j > 0) return;
+		j = 3 - i;
+	}
+	
+}
+\end{lstlisting}
+Otra forma de romper un lazo for y un switch es con una sentencia de return.
+
 
 \subsection{Capítulo 9: SubProgramas.}
 
