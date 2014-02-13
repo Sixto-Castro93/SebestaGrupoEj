@@ -181,8 +181,140 @@ Output\\
 Al observar los tiempos de ejecución, vemos que el primero es menor que el segundo, correspondiente a la función del arreglo estático que nos indica que el tiempo en llevar ese arreglo a la memoria prima es muy corto a diferencia del segundo que se lo realizo en el heap.
 
 \end{itemize}
-\subsection{Capítulo 6: Expressions and Assignment Statements}
+\subsection{Capítulo 7: Expressions and Assignment Statements}
 \begin{itemize}
+\item {\bf Pregunta 1} \\\\
+Ejecute el siguiente código  en algún sistema 
+que soporte C para determinar los valores de sum1 y Sum2. Explicar la 
+resultados..\\
+Codigo ya pasado a  C\\
+\begin{lstlisting}[frame=single]  % Start your code-block
+%#include<stdio.h>
+%#include<stdlib.h>
+%#include<conio.h>
+
+	int fun(int *k) {
+	*k += 4;
+	return 3 * (*k) - 1;
+	}
+//Suppose fun is used in a program as follows:
+	void main() {
+	int i = 10, j = 10, sum1, sum2;
+	sum1 = (i / 2) + fun(&i);
+	sum2 = fun(&j) + (j / 2);
+	getch();
+	}
+
+\end{lstlisting}
+OUTPUT\\
+El resultado 1de sum1 es: 46, y el de sum2 es 48\\
+Esto se da a que se evaluan las expresiones de izquierad a derecha , por lo que en sum1  primero se realiza i/2 y despues la funcion fun modifica el valor de la variable i y devuelve 41  , caso contrario en sum2 que primero modifica fun el valor de j y despues a este valor modificado se lo divide para 2 , de ahy que siendo las mismas expresiones pero con orden diferente devulevan valores distintos
+
+\item {\bf Pregunta 2} \\\\
+Modificar el programa del Ejercicio  1 en C + +, Java y C \#, 
+ejecutarlos, y comparar los resultados.\\
+
+Codigo en C++\\
+\begin{lstlisting}[frame=single]  % Start your code-block
+
+\#include <iostream>
+
+using namespace std;
+int  fun(int *a); 
+int main()
+{
+    int a=10,b=10,c=10;
+    int sum1=a/2 + fun(&a);
+    int sum2=fun(&b)+ b/2;
+    
+   cout << sum1 << endl; 
+   cout << sum2 << endl; 
+   
+   return 0;
+}
+
+int fun(int *a){
+*a +=4;
+return 3 * (*a) - 1;
+}
+
+\end{lstlisting}
+OUTPUT\\
+El resultado de sum1 es: 46, y el de sum2 es 48\\
+ 
+
+Codigo en C\#\\
+\begin{lstlisting}[frame=single]  % Start your code-block
+
+using System.IO;
+using System;
+
+class Program
+{
+    int a;
+    public Program(int a1){
+        a=a1;
+        
+    }
+    static void Main()
+    {
+        int a=10;
+        int b=10;
+        Program P=new Program(a);
+        Program P1=new Program(b);
+        int sum1=P.a/2+P.fun(P);
+        int sum2=P1.fun(P1)+P1.a/2;
+        
+        Console.WriteLine(sum1);
+        Console.WriteLine(sum2);
+    }
+    public int fun(Program a){
+        a.a+=4;
+        return 3*a.a-1;
+        
+    }
+}
+
+\end{lstlisting}
+OUTPUT\\
+El resultado de sum1 es: 46, y el de sum2 es 48\\
+ 
+
+
+Codigo en Java\\
+\begin{lstlisting}[frame=single]  % Start your code-block
+
+public class NewClass {
+    
+ public int a=10,b=10,c=10;
+    public static void main(String[] args) {
+        NewCla numeroa=new NewCla(10);
+        NewCla numerob=new NewCla(10);
+        int sum1,sum2;
+        sum1=numeroa.a/2+numeroa.fun(numeroa);
+        sum2=numerob.fun(numerob)+numerob.a/2;
+
+        System.out.print(sum1 + ";"   +sum2);
+    }
+
+}
+class NewCla {
+int a;
+public NewCla(int a1){
+    a=a1;
+}    
+int fun(NewCla a){
+a.a+=4;
+return 3 * (a.a) - 1;
+}
+}
+
+\end{lstlisting}
+OUTPUT\\
+El resultado de sum1 es: 46, y el de sum2 es 48\\
+
+Como podemos observar en todos los casos dieron los mismos resultaos , quier decir que los tres programas dan prioridad a evaluar primero de izquierda a derecha.
+
 \item {\bf Pregunta 3} \\\\
 Escribe un programa en tu lenguaje favorito que determine y muestre la precedencia y asociatividad de sus operadores aritmeticos y booleanos.\\
 Lenguaje Java\\
@@ -229,7 +361,7 @@ El resultado 3 es: 0.0\\
 Escribir un programa en Java que exponga la regla para el orden de evaluación de operando cuando uno de los operandos es un método call.\\
 Lenguaje Java\\
 \begin{lstlisting}[frame=single]  % Start your code-block
-%#include<stdio.h>
+%# include<stdio.h>
 %#include<conio.h>
 %#include<stdlib.h>
 %#include<windows.h>
@@ -261,6 +393,7 @@ Como podemos ver en el main en la 1era linea, fun1() retorna 3 y actualiza la va
 En cambio si fuese:  a = a + fun1();. En este caso primero 'a'=5 + fun1() que retorne 3; dando una asignación de 8 a la variable a.
 
 \item {\bf Pregunta 5} \\\\
+
 Lenguaje C++
 \begin{lstlisting}[frame=single]  % Start your code-block
 
@@ -270,7 +403,7 @@ extern int a = 10;
 void main(){
 	
 	a = fun1()+a;  // a = a+fun1();
-	printf("%d", a);
+	printf("\%d", a);
 	getch();
 }
 
@@ -314,8 +447,61 @@ En cambio si fuese:  a = fun1()+a. En ese caso fun1() retorna 3 y actualiza la v
 
 
 
-\end{itemize}
+\item {\bf Pregunta 9} \\\\
+Escriba un programa, ya sea en Java, C + +, C \#  que lleve a cabo un gran número 
+de operaciones de punto flotante y un número igual de operaciones con enteros 
+y comparar el tiempo requerido..\\
 
+
+Lenguaje Java\\
+\begin{lstlisting}[frame=single]  % Start your code-block
+package bdpapeleria.Pantallas;
+public class Ejercicio9 {
+   void enteros(){
+       int a = 10;
+       int b=10;
+       int resultado=0;
+       for (double i=0;i<900000000;i++){
+       resultado +=a+b;
+       resultado -=a;
+       resultado -=b;
+       resultado -=b+a;
+       resultado +=a+b;
+       resultado +=a+(4*b);
+       
+       }
+       System.out.print(resultado);
+    }
+   void flotantes(){
+   float a = (float) 10.0;
+       float b=(float) 10.0;
+       float resultado=0;
+       for (double i=0;i<900000000;i++){
+       resultado +=a+b;
+       resultado -=a;
+       resultado -=b;
+       resultado -=b+a;
+       resultado +=a+b;
+       resultado +=a+(4*b);
+       
+       }
+       System.out.print(resultado+"\n");
+   }
+   public static void main(String[] args) {
+    Ejercicio9 e=new Ejercicio9();
+    e.flotantes();
+    e.enteros();
+    
+    
+    }
+}
+ 
+
+\end{lstlisting}
+
+El tiempo realizando las operaaciones con int fue :6 segundos ,   mientras que con los flotantes fue : 10 segundos.    Se llega a la conclusion que por ser los foltantes de mayor precion que los int a la maquina le toam mayor trabajo realizar esas opraciones , debidoa  eso la diferencia de tiempo. \\
+
+\end{itemize}
 
 \subsection{Capítulo 9: SubProgramas.}
 
