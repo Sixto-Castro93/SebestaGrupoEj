@@ -16,13 +16,26 @@
 \usepackage{listings}
 
 \title{Ejercicios de Programación - Sebesta}
-\author{Lenguajes de Programación - ESPOL}
+\author{\\Autores: \\  \\-Cristina Barreno \\ -Sixto Castro Redrobán\\ -Jordy Vasquez\\ \\}
 
 %\date{}                                                        % Activate to display a given date or no date
 
 \begin{document}
-\maketitle
 
+\includegraphics[width=3cm]{./imagenes/Espol.png}{ \fontsize{18}{0} \bf ESCUELA SUPERIOR \\}
+
+\begin{center}
+{\fontsize{18}{0} \bf POLITÉCNICA DEL LITORAL\\}
+\vspace{2cm}
+{\LARGE{ Materia: Lenguajes de Programación }}\\
+\vspace{2cm}
+{\LARGE{  Ejercicios del libro Sebesta}}\\ 
+\vspace{2cm}
+{\LARGE{ Paralelo: 1}}\\
+\vspace{2cm}
+\end{center}
+\maketitle
+\newpage
 \section{Introducción}
 Las respuestas propuestas en este repositorio son correspondientes a las preguntas del libro de Robert Sebesta, Concepts of Programming Languages.
 
@@ -503,6 +516,45 @@ El tiempo realizando las operaaciones con int fue :6 segundos ,   mientras que c
 \end{itemize}
 \subsection{Capítulo 8: Statement-Level Control Structures.}
 \begin{itemize}
+\item {\bf Pregunta 3} \\\\
+Pros y contras de usar palabras únicas de cierre en sentencias compuestas. \\\\
+{\bf Pros:}\\
+Legibilidad: Cuando vemos un endif o endwhile en un programa escrito por alguien más, es claro ver que bloque finaliza.\\
+Usando llaves {} es menos claro sobre todo cuando el bloque cubre muchas líneas de código y hay bastantes laves.\\
+Llaves son mucho más difícil de leer, en particular para saber donde el bloque termina.\\
+Ej:
+\begin{lstlisting}[frame=single]  % Start your code-block
+using System;
+ if ( <expression1> )
+	if ( <expression2> )
+		<stmt>
+else
+	<stmt2>
+\end{lstlisting}
+A cuál if pertenece else? Con el uso de endif, no hay incoveniente. Por ejemplo:\\
+\begin{lstlisting}[frame=single]  % Start your code-block
+using System;
+if (<expression1>) then 			
+	if (<expression2>) 							
+		<stmt1> 								
+	endif 								
+else 										
+	<stmt2>							
+\end{lstlisting}
+\begin{lstlisting}[frame=single]  % Start your code-block
+using System;
+if (<expression1>) then
+	if (<expression2>)
+		<stmt1> 								
+else
+	<stmt2>
+endif
+\end{lstlisting}
+
+{\bf Cons:} 
+Capacidad de escritura: El uso de palabras reservadas significa que hay más palabras reservadas; por lo tanto menos palabras disponibles para el programador.\\
+Esto también quiere decir que hay más palabras por aprender; caso contrario nos limitaríamos a unas cuanttas palabras reservadas.\\
+
 \item {\bf Pregunta 4} \\\\
 Considere el sgte segmento de un programa en C. Rescribalo sin usar gotos o breaks\\\\
 Lenguaje C\\
