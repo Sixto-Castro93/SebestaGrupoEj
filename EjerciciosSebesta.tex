@@ -31,12 +31,12 @@ Las respuestas propuestas en este repositorio son correspondientes a las pregunt
 \subsection{Capítulo 5: Nombres, Enlaces y Alcances.}
 \begin{itemize}
 \item {\bf Pregunta 5} \\\\
-Escriba una función en C que incluya las siguienetes secuencia de sentencias:
+Escriba una función en C que incluya las siguienetes secuencia de sentencias:\\
 x=21;
 int x;
-x=42;
-Ejecute el programa ye explique los resultados. Reescriba el código en C++ y Java, compare los resultados.
-Lenguaje C
+x=42;\\
+Ejecute el programa y explique los resultados. Reescriba el código en C++ y Java, compare los resultados.\\\\
+Lenguaje C\\
 \begin{lstlisting}[frame=single]
 void main()
  {
@@ -70,7 +70,7 @@ Lenguaje Java
 Error: Exception in thread "main" java.lang.RuntimeException: Uncompilable source code - cannot find symbol-symbol: variable x\\\\ 
 
 \item {\bf Pregunta 6} \\\\
-Escribir un programa en C++, Java, SI SHARP para determinar el alcance de una variable declarada en un For statement. Especialmente el código debe determinar si una variable es visible después del cuerpo del statement FOR.\\\\
+Escribir un programa en C++, Java, C share para determinar el alcance de una variable declarada en un For statement. Especialmente el código debe determinar si una variable es visible después del cuerpo del statement FOR.\\\\
 
 Lenguaje Java\\
 \begin{lstlisting}[frame=single]  % Start your code-block
@@ -552,8 +552,76 @@ Otra forma de romper un lazo for y un switch es con una sentencia de return.
 
 
 \subsection{Capítulo 9: SubProgramas.}
+\begin{itemize}
+\item {\bf Pregunta 5} \\\\
+Write a program in some language that has both static and stackdynamic local variables in subprograms. Create six large (at least
+100 * 100) matrices in the subprogram—three static and three stack dynamic. Fill two of the static matrices and two of the stack-dynamic matrices with random numbers in the range of 1 to 100. The code in the subprogram must perform a large number of matrix multiplication operations on the static matrices and time the process. Then it must repeat this with the stack-dynamic matrices. Compare and explain the results.\\\\
+Lenguaje Java\\
+\end{itemize}
+ \begin{lstlisting}
 
-%\input{c5p6}
+ public class Lenguajes {
+	int tam =100;
+ 	
+ 	public static int[][] m1 = new int[tam][tam];
+ 	public static int[][] m2 = new int[tam][tam];
+ 	public static int[][] mr = new int[tam][tam];
+
+	public static void main(String args[])
+	{
+             
+ 		long ini = System.nanoTime();
+ 		this.ejecutarRandom();
+ 		long fin = System.nanoTime();
+ 		long t1 = fin-ini;
+ 		System.out.println(t1);
+                
+                 
+                	long ini2 = System.nanoTime();
+ 		this.operacionesD();
+ 		long fin2 = System.nanoTime();
+ 		long t2 =fin2-ini2;
+                	 System.out.println(t2);
+ 	}
+ 	
+ 	 	
+ 	void ejecutarRandom(int[][] m1, int[][] m2){
+ 		for(int i=0;i<tam;i++){
+ 			for(int j=0;jl<tam;jl++){
+ 				m[i][j] = (int)(Math.random()*tam)+1;
+ 				m[i][j] = (int)(Math.random()*tam)+1;
+ 				
+ 			}
+ 		}
+ 	}
+ 	
+ 	void operacionesDinamic(){
+ 		int[][] dinamic_m1 = new int[tam][tam];
+ 		int[][] dinamic_m2 = new int[tam][tam];
+ 		int[][] dinamic_ml = new int[tam][tam];
+ 		
+ 		this.matricesRandom(dinamic_m1, dinamic_m2);
+ 		
+ 		 for(int i = 0; i <tam; i++){
+ 	            for (int j = 0; j < tam; j++){
+ 	                for (int k = 0; k <tam; k++){
+ 	                	dinamic_ml[i][j] += 
+                                  dinamic_m1[i][k] * dinamic_m2[k][j];
+ 	                }
+ 	            }
+ 	        }
+ 	
+ 	}
+ 
+ 
+ 	
+ }
+ \end{lstlisting}
+Output:\\
+T1: 0.155000
+T2: 0.140000
+El tiempo obtenido de forma dinamica es más bajo que el obtenido de forma estática.
+
 
         
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.12)  13 FEB 2014 00:20
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.1.12)  13 FEB 2014 01:15
 entering extended mode
 **C:/Users/User/Documents/GitHub/SebestaGrupoEj/EjerciciosSebesta.tex
 (C:/Users/User/Documents/GitHub/SebestaGrupoEj/EjerciciosSebesta.tex
@@ -580,6 +580,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--40
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--40
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 48--50
 
  []
@@ -625,17 +635,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--77
 Package Listings Warning: Text dropped after begin of listing on input line 77.
 
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--92
-
- []
-
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
@@ -711,12 +721,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 216--218
 
  []
 
-
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 241--243
 
  []
 
-[6]
+
 Underfull \hbox (badness 10000) in paragraph at lines 245--247
 
  []
@@ -726,12 +736,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 278--280
 
  []
 
-
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 283--285
 
  []
 
-[7]
+
 Underfull \hbox (badness 10000) in paragraph at lines 312--314
 
  []
@@ -746,15 +756,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 317--321
 
  []
 
+[8]
 
 Package Listings Warning: Text dropped after begin of listing on input line 321
 .
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 344--352
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 344--352
 
@@ -776,12 +782,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 344--352
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--357
+Underfull \hbox (badness 10000) in paragraph at lines 344--352
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 359--368
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
 
  []
 
@@ -791,16 +797,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 359--368
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
+Underfull \hbox (badness 10000) in paragraph at lines 359--368
 
  []
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 420--423
 
  []
@@ -849,25 +860,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 506--509
 
  []
 
+[13]
 
 Package Listings Warning: Text dropped after begin of listing on input line 511
 .
 
-[13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 570.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 570.
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 556--560
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 556--560
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 556--560
+
+ []
+
+[15]
+Overfull \hbox (68.08177pt too wide) in paragraph at lines 591--592
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (68.08177pt too wide) in paragraph at lines 592--594
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.64671pt too wide) in paragraph at lines 603--605
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (75.13011pt too wide) in paragraph at lines 609--610
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 638.
+[16]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 638.
  (C:\Users\User\Documents\GitHub\SebestaGrupoEj\EjerciciosSebesta.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 570.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 570.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 638.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 638.
 Package rerunfilecheck Info: File `EjerciciosSebesta.out' has not changed.
 (rerunfilecheck)             Checksum: 826F698EA38A18BDF028522A3BFC8104;482.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 570.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 638.
  ) 
 Here is how much of TeX's memory you used:
- 8537 strings out of 494045
- 118842 string characters out of 3148390
- 230274 words of memory out of 3000000
+ 8597 strings out of 494045
+ 119773 string characters out of 3148390
+ 233274 words of memory out of 3000000
  11393 multiletter control sequences out of 15000+200000
  16284 words of font info for 50 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
@@ -880,9 +926,9 @@ ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\User\AppData\Local\MiKTeX\2.9\
 fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\User\AppData\Local\Mi
 KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on EjerciciosSebesta.pdf (14 pages, 164311 bytes).
+Output written on EjerciciosSebesta.pdf (16 pages, 175550 bytes).
 PDF statistics:
- 734 PDF objects out of 1000 (max. 8388607)
- 354 named destinations out of 1000 (max. 500000)
+ 813 PDF objects out of 1000 (max. 8388607)
+ 414 named destinations out of 1000 (max. 500000)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
